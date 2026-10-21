@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --primary-color: #a6f6af;
+    --secondary-color: #f4ec77;
+    --tertiary-color: #f6a6a6;
+    --quaternary-color: #4af95e;
+    --quinary-color: #ffde37;
+    --senary-color: #ebbfbf;
+    --text-color: #333;
+    --background-color: #fbfbfb;
+}
+
+
 body {
-    background-color: #fbfbfb;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background-color);
     background-image: 
         linear-gradient(to right, #e7e6e6c9 1px, transparent 1px),
         linear-gradient(to bottom, #e7e6e6c9 1px, transparent 1px);
@@ -10,6 +25,7 @@ body {
 }
 
 header {
+    font-family: 'Alfa Slab One', cursive;
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -19,9 +35,14 @@ header h1 {
     margin-right: 20px;
     padding: 10px;
     font-size: 2em;
-    color: #333;
-    background: linear-gradient(179deg, transparent 30%, #a6f6af 10%);
+    color: var(--text-color);
+    background: linear-gradient(179deg, transparent 30%, var(--primary-color) 10%);
 }
+
+header h1:hover{
+    background: linear-gradient(179deg, transparent 30%, var(--quaternary-color) 10%);
+}
+
 
 header nav ul {
     margin-top: 10px;
@@ -31,12 +52,16 @@ header nav ul {
 
 header nav ul li {
     margin: 0 10px;
-    background: linear-gradient(179deg, transparent 30%, #a6f6af 10%);
+    background: linear-gradient(179deg, transparent 30%, var(--primary-color) 10%);
+}
+
+header nav ul li:hover {
+    background: linear-gradient(179deg, transparent 30%, var(--quaternary-color) 10%);
 }
 
 header nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -63,13 +88,18 @@ main h2 {
 
 .postit {
     padding: 10px;
-    background-color: #f4ec77;
+    background-color: var(--secondary-color);
     box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+.postit:hover {
+    background-color: var(--quinary-color);
+    box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 .postit a {
     text-decoration: none;
-    color: #000000;
+    color: var(--text-color);
 }
 
 .ultimos-artigos article:nth-child(1) .postit { transform: rotate(3deg); }
