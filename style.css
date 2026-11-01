@@ -67,7 +67,7 @@ header nav ul li a {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 5px;
@@ -145,4 +145,17 @@ footer p {
     margin: 0;
         background: linear-gradient(179deg, transparent 30%, #a6f6af 10%);
 
+}
+
+.btn-danger{
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: var(--senary-color);
 }
