@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --primary-color: #a6f6af;
+    --secondary-color: #f4ec77;
+    --tertiary-color: #f6a6a6;
+    --quaternary-color: #4af95e;
+    --quinary-color: #ffde37;
+    --senary-color: #ebbfbf;
+    --text-color: #333;
+    --background-color: #fbfbfb;
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background-color);
+    background-image: 
+        linear-gradient(to right, #e7e6e6c9 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e6e6c9 1px, transparent 1px);
+    background-size: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    font-family: 'Alfa Slab One', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+header h1 {
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 2em;
+    color: var(--text-color);
+    background: linear-gradient(179deg, transparent 30%, var(--primary-color) 10%);
+}
+
+header h1:hover{
+    background: linear-gradient(179deg, transparent 30%, var(--quaternary-color) 10%);
+}
+
+
+header nav ul {
+    margin-top: 10px;
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+    background: linear-gradient(179deg, transparent 30%, var(--primary-color) 10%);
+}
+
+header nav ul li:hover {
+    background: linear-gradient(179deg, transparent 30%, var(--quaternary-color) 10%);
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.novo-Artigo {
+    color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    min-height: 300px;
+    min-width: 300px;
+}
+
+.novo-Artigo h3 {
+    justify-content: flex-start;
+    font-size: 1.2em;
+}
+
+.form-artigo {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--text-color);
+}
+
+.form-artigo label {
+    margin-bottom: 5px;
+    color: var(--background-color);
+}
+
+.form-artigo input,
+.form-artigo textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--background-color);
+}
+
+.form-artigo button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+}
+
+.form-artigo button:hover {
+    background-color: var(--quaternary-color);
+}

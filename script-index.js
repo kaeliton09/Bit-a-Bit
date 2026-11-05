@@ -1,4 +1,5 @@
-const API = "http://127.0.0.1:8080/artigos"
+const API = "http://localhost:8080/artigos"
+const limitLastArtigos = 3; 
 
 async function getArtigos() {
     try {
@@ -21,9 +22,28 @@ async function getArtigos() {
 
 }
 
+async function getLastArtigos(limitLastArtigos) {
+    try {
+        const query = API + "/ultimos/" + limitLastArtigos;
+        const resp = await fetch(query);
+        const artigos = await resp.json(); 
+
+        document.getElementById("ultimos-artigos").innerHTML = artigos.map(artigo => 
+        `<article>
+            <div class="postit">
+                    <h4>${artigo.titulo}</h4>
+                    <a href="artigo${artigo.id}.html">Leia mais</a>
+                </div>
+        </article>`).join("");
+    } catch (error) {
+        console.error("Erro ao buscar últimos artigos:", error);
+    }
+}
+
 async function deleteArtigo(id) {
     await fetch(`${API}/deletar/${id}`, { method: 'DELETE' });
     getArtigos(); // Atualiza a lista de artigos após a exclusão
 }
 
 getArtigos(); // Chama a função para carregar os artigos ao carregar a página
+getLastArtigos(limitLastArtigos); // Chama a função para carregar os últimos artigos ao carregar a página
