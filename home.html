@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+
+    <link rel="stylesheet" href="style-home.css">
+</head>
+<body>
+    <header>
+        <h1>Bit a Bit</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="artigos.html">Artigos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Bem-vindo de volta!</h2>
+        <p>Quais são suas ideias de hoje?</p>
+
+        <section class="novo-Artigo" id="novo-Artigo">
+            <h3>Escreva um novo artigo</h3>
+            <form class="form-artigo" id="form-artigo">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required >
+
+                <label for="conteudo">Conteúdo:</label>
+                <textarea id="conteudo" name="conteudo" rows="20" cols="50" required></textarea>
+
+                <button type="submit">Publicar</button>
+            </form>
+    </main>
+
+
+    <script src="script-home.js"></script>
+
+</body>
+</html>
