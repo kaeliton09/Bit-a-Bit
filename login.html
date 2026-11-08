@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <link rel="stylesheet" href="style-login.css">
 </head>
 <body>
-    
+    <main class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Por favor, insira um email válido.')" oninput="this.setCustomValidity('')">
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required minlength="7" oninvalid="this.setCustomValidity('A senha deve ter pelo menos 7 caracteres.')" oninput="this.setCustomValidity('')">
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </main>
 </body>
 </html>
