@@ -2,6 +2,7 @@ package dev.kaeliton.Bit_a_Bit.Usuario;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController 
 @RequestMapping("/usuarios")
+@CrossOrigin(origins = {"http://127.0.0.1:3000", "http://localhost:3000"})
 public class UsuarioController {
 
     public UsuarioService usuarioService;
