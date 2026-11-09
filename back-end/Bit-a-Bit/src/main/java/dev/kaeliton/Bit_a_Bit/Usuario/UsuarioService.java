@@ -51,6 +51,14 @@ public class UsuarioService {
                 .toList();
     }
 
+    public UsuarioModel login(UsuarioModel usuario) {
+        List<UsuarioModel> usuarios = usuarioRepository.findAll();
+        return usuarios.stream()
+                .filter(u -> u.getEmail().equals(usuario.getEmail()) && u.getSenha().equals(usuario.getSenha()))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Credenciais inválidas"));
+    }
+
     
 
 }

@@ -52,4 +52,9 @@ public class UsuarioController {
         return usuarioService.atualizarUsuario(id, usuarioAtualizado);
     }
 
+    @PostMapping("/login")
+    public UsuarioModel login(@RequestBody UsuarioModel usuario) {
+        return usuarioService.login(usuario);
+    }
+
 }
