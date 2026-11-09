@@ -14,6 +14,14 @@ public class ArtigoService {
         this.artigoRespository = artigoRespository;
     }
 
+    public List<ArtigoModel> artigosRecentes(){
+        List<ArtigoModel> artigos = artigoRespository.findAll();
+        return artigos.stream()
+                .sorted((a1, a2) -> a2.getId().compareTo(a1.getId()))
+                .limit(10)
+                .toList();
+    }
+
     public ArtigoModel criarArtigo(ArtigoModel artigo) {
         return artigoRespository.save(artigo);
     }

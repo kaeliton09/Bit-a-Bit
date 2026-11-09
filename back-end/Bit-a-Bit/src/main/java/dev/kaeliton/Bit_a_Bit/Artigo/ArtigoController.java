@@ -22,8 +22,8 @@ public class ArtigoController {
     }
 
     @GetMapping("/listar")
-    public List<ArtigoModel> obterTodosArtigos() {
-        return artigoService.obterTodosArtigos();
+    public List<ArtigoModel> obterArtigosRecentes() {
+        return artigoService.artigosRecentes();
     }
 
     @GetMapping ("/ultimos/{quantidade}")
