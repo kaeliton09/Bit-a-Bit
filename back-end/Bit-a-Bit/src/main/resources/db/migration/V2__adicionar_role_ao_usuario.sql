@@ -1,0 +1,2 @@
+ALTER usuario
+    ADD COLUMN role VARCHAR(256) NOT NULL;
