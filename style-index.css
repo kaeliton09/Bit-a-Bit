@@ -88,6 +88,7 @@ main h2 {
 
 .postit {
     padding: 10px;
+    max-width: 150px;
     background-color: var(--secondary-color);
     box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.15);
 }
@@ -110,8 +111,7 @@ main h2 {
 .titleArtigo {
     padding: 10px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
 }
 
 .titleArtigo time{

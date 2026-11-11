@@ -14,7 +14,6 @@ async function getArtigos() {
                     <time datetime="${artigo.dataPublicacao}">${artigo.dataPublicacao}</time>
                 </div>
                 <p>${artigo.texto}</p>
-                <button onclick="deleteArtigo(${artigo.id})" class="btn-danger">Deletar</button>
             </article>
         `).join("");
     } catch (error) {
